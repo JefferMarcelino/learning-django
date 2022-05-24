@@ -20,6 +20,9 @@ class Room(models.Model):
     update = models.DateTimeField(auto_now=True)
     created = models.TimeField(auto_now_add=True)
 
+    class Meta:
+        ordering = ["updated", "created"]
+
     def __str__(self):
         return str(self.name)
 
